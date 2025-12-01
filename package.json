@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:main": "cd main && npm run dev",
+    "build:main": "cd main && npm run build",
+    "dev:project": "cd projects/$PROJECT && npm run dev",
+    "test:e2e": "cd main && npm run test:e2e"
+  },
+  "workspaces": [
+    "main",
+    "projects/*"
+  ]
+}
