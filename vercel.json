@@ -1,6 +1,0 @@
-{
-  "version": 2,
-  "buildCommand": "cd main && npm install && npm run build",
-  "outputDirectory": "main/dist",
-  "installCommand": "npm install --prefix main"
-}
