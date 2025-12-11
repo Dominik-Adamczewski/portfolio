@@ -22,20 +22,11 @@ app.use('/projects', express.static(path.join(__dirname, 'public', 'projects')))
 // API: Get all projects
 app.get('/api/projects', (req, res) => {
   const projectsDir = path.join(__dirname, 'public', 'projects')
-  
-  console.log('📁 Looking for projects in:', projectsDir)
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? '' 
+    : 'http://localhost:3000'
   
   try {
-    // Check if directory exists
-    if (!fs.existsSync(projectsDir)) {
-      console.error('❌ Projects directory does not exist!')
-      return res.status(404).json({ 
-        success: false, 
-        error: 'Projects directory not found',
-        path: projectsDir 
-      })
-    }
-    
     const projects = fs.readdirSync(projectsDir)
       .filter(name => {
         const projectPath = path.join(projectsDir, name)
@@ -45,7 +36,7 @@ app.get('/api/projects', (req, res) => {
         id: name,
         name: name,
         title: name.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        url: `/projects/${name}/index.html`
+        url: `${baseUrl}/projects/${name}/index.html`  // Full URL in dev
       }))
     
     console.log('✅ Found projects:', projects.length)
@@ -54,7 +45,7 @@ app.get('/api/projects', (req, res) => {
     console.error('❌ Error:', error)
     res.status(500).json({ success: false, error: error.message })
   }
-})
+});
 
 // API: Health check
 app.get('/api/health', (req, res) => {

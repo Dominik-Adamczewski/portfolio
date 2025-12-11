@@ -55,6 +55,10 @@ test-results/
 playwright-report/
 playwright/.cache/
 
+# Vue projects - ignore build outputs
+vue-projects/*/node_modules/
+vue-projects/*/dist/
+
 # Optional: Lock files (uncomment if you want to ignore them)
 # package-lock.json
 # yarn.lock
