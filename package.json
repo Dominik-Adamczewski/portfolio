@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:main": "cd main && npm run dev",
-    "build:main": "cd main && npm run build",
-    "dev:project": "cd projects/$PROJECT && npm run dev",
-    "test:e2e": "cd main && npm run test:e2e"
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:client",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
   },
-  "workspaces": [
-    "main",
-    "projects/*"
-  ]
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
