@@ -1,0 +1,15 @@
+html {
+  font-size: 10px;
+  font-family: $font-main;
+  color: $very-dark-cyan;
+}
+
+body {
+  min-height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

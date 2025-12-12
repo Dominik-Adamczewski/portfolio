@@ -1,0 +1,281 @@
+html {
+  font-size: 10px;
+  font-family: "Space Mono", monospace, sans-serif;
+  color: hsl(183, 100%, 15%);
+}
+
+body {
+  min-height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100%;
+  min-height: 100vh;
+  background-color: lightgray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-name {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+.app-name__heading {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.calc-container {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  width: 100%;
+  padding: 25px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px 10px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .calc-container {
+    max-width: 900px;
+    max-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .calc-container__calculation,
+  .calc-container__result {
+    width: 48%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.input-component {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 20px 0;
+}
+
+.input-component__heading {
+  margin: 0 0 10px 0;
+}
+
+.input-component input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  font-size: 2.4rem;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  padding-right: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+.input-component input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.input-component input.input-error {
+  outline: 2px solid red;
+}
+
+.input-component__error-msg {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 5px;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+.input-component__error-msg.active {
+  display: initial;
+}
+
+.input-component__error-msg--grid-variant {
+  top: 12px;
+  right: 0;
+}
+
+.input-component__placeholder {
+  position: absolute;
+  top: 38px;
+  left: 7px;
+  font-size: 2.4rem;
+  color: lightgray;
+}
+
+.percentage-grid {
+  position: relative;
+  margin: 20px 0;
+}
+
+.percentage-grid__grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.percentage-grid__grid-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-size: 2.4rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.percentage-grid__grid-wrapper input[type=radio] {
+  display: none;
+}
+
+.percentage-grid__grid-wrapper input[type=radio]:checked + label {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.percentage-grid__grid-element--custom.active {
+  background-color: hsl(0, 0%, 100%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.percentage-grid__custom-input-field {
+  display: none;
+}
+
+.percentage-grid__custom-input-field.active {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid hsl(172, 67%, 45%);
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 10px;
+}
+.percentage-grid__custom-input-field.active:focus {
+  border: 2px solid hsl(183, 100%, 15%);
+  outline: none;
+}
+
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  min-height: 230px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .result {
+    height: 100%;
+  }
+}
+
+.amount-component {
+  height: 50px;
+}
+
+.amount-component__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.amount-component__label {
+  font-size: 1.2rem;
+}
+
+.amount-component__amount {
+  font-size: 2.4rem;
+}
+
+.button--reset {
+  width: 100%;
+  height: 40px;
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 5px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  margin-top: auto;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
