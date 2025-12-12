@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive pricing component</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="info">
+      <h1 class="info__title">Simple, traffic based pricing</h1>
+      <div class="info__text">
+        Sign-up for our 30-day trial.<br>
+        No credit card required.
+      </div>
+    </div>
+    <div class="pricing-component">
+      <div class="pricing-component__upper-section">
+        <span class="pricing-component__social-proof">100k pageviews</span>
+        <span class="pricing-component__price-info">
+          <span class="pricing-component__price"></span> <span class="pricing-component__pricing-type">/ month</span>
+        </span>
+        <div class="pricing-component__slider-container">
+          <input type="range" min="1" max="32" value="16" step="1" class="pricing-component__slider">
+        </div>
+        <div class="pricing-component__billing-settings">
+          <span class="pricing-component__pricing-type-info--monthly">Monthly Billing</span>
+          <label class="pricing-component__switch">
+            <input type="checkbox" class="pricing-component__billing-checkbox">
+            <span class="pricing-component__toggle-slider"></span>
+          </label>
+          <span class="pricing-component__pricing-type-info--yearly">Yearly Billing</span>
+          <span class="pricing-component__yearly-pricing-badge"></span>
+        </div>
+      </div>
+      <div class="pricing-component__what-you-get">
+        <div class="pricing-component__what-you-get-item-wrapper">
+          <p class="pricing-component__what-you-get-item">Unlimited websites</p>
+          <p class="pricing-component__what-you-get-item">100% data ownership</p>
+          <p class="pricing-component__what-you-get-item">Email reports</p>
+        </div>
+        <button class="pricing-component__cta-button">Start my trial</button>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Dominik-Adamczewski/FrontEndLearning">Dominik Adamczewski</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

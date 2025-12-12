@@ -1,0 +1,274 @@
+.wrapper {
+  height: 100%;
+  min-height: 80vh;
+  width: 95%;
+  max-width: 800px;
+  background-color: white;
+}
+
+.info {
+  height: 30%;
+  text-align: center;
+  background-image: url('../images/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $very-phale-blue;
+  padding: 25px;
+}
+
+.info__title {
+  color: $dark-desaturated-blue;
+}
+
+.info__text {
+  color: $grayish-blue;
+  line-height: 2;
+}
+
+.pricing-component {
+  height: 70%;
+  text-align: center;
+}
+
+.pricing-component__upper-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1024px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 40px;
+  }
+}
+
+.pricing-component__social-proof {
+  display: block;
+  text-transform: uppercase;
+  color: $grayish-blue;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0 20px 0;
+  order: 1;
+
+  @media (min-width: $desktop) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.pricing-component__slider-container {
+  width: 100%;
+  margin: 25px 0 35px 0;
+  order: 2;
+
+  @media (min-width: $desktop) {
+    width: 80%;
+    margin: 35px auto;
+  }
+}
+
+.pricing-component__slider {
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+
+  &::-webkit-slider-runnable-track {
+    height: 1rem;
+    background-color: $soft-cyan;
+    border-radius: 10px;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: $strong-cyan;
+    border-radius: 50%;
+    margin-top: calc((1rem / 2) - (40px / 2));
+    background-image: url('../images/icon-slider.svg');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px 5px $soft-cyan;
+    cursor: pointer;
+  }
+}
+
+.pricing-component__price-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+  order: 3;
+
+  @media (min-width: $desktop) {
+    order: 2;
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.pricing-component__price {
+  margin-right: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+
+  @media (min-width: $desktop) {
+    font-size: 4rem;
+  }
+}
+
+.pricing-component__billing-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  order: 4;
+
+  @media (min-width: $desktop) {
+    margin-top: 30px;
+    margin-right: 50px;
+  }
+}
+
+.pricing-component__pricing-type-info--monthly.active,
+.pricing-component__pricing-type-info--yearly.active {
+  font-weight: bold;
+}
+
+.pricing-component__switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin: 0 15px;
+}
+
+.pricing-component__billing-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked+.pricing-component__toggle-slider {
+    background-color: $strong-cyan;
+  }
+
+  &:checked+.pricing-component__toggle-slider:before {
+    transform: translateX(30px);
+  }
+}
+
+.pricing-component__toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: .4s;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s;
+  }
+}
+
+.pricing-component__yearly-pricing-badge {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: $light-grayish-red;
+  color: $light-red;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  &::after {
+    content: '-25%';
+
+    @media (min-width: $desktop) {
+      content: '25% discount';
+    }
+  }
+}
+
+.pricing-component__what-you-get {
+  border-top: 1px solid lightgrey;
+  padding-top: 15px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.pricing-component__what-you-get-item-wrapper {
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.pricing-component__what-you-get-item {
+  margin: 10px;
+
+  &::before {
+    content: url('../images/icon-check.svg');
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 250px;
+  }
+}
+
+.pricing-component__cta-button {
+  padding: 10px;
+  margin: 20px 0;
+  width: 50%;
+  border-radius: 10px;
+  background-color: $dark-desaturated-blue;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsl(227, 38%, 52%);
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 200px;
+    height: 50px;
+  }
+}
