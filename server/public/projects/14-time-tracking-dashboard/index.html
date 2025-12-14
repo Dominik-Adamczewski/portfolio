@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Rubik', 'sans-serif']
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard-container text-lg py-10 px-4 lg:px-4 lg:min-h-screen lg:flex lg:items-center lg:justify-center">
+    <div class="dashboard grid grid-cols-1 grid-rows-7 lg:grid-rows-2 lg:grid-cols-4 gap-y-6 lg:gap-x-6 items-center w-full h-1/2 min-h-96">
+      <section class="dashboard-item dashboard__item--main rounded-xl min-h-48 lg:h-full lg:w-full lg:row-span-2">
+        <div class="dashboard-item__user-section flex items-center justify-center p-6 rounded-xl h-2/3">
+          <img src="images/image-jeremy.png" alt="Jeremy" class="w-20 border-2 border-white rounded-full">
+          <div class="dashboard-item__user-data-container ml-4 text-center">
+            <span class="block text-gray-400">Report for</span>
+            <span class="block text-2xl text-slate-200">Jeremy Robson</span>
+          </div>
+        </div>
+        <div class="dashboard-item__switches-section flex justify-around items-center h-20">
+          <button class="dashboard-item__switch">
+            Daily
+          </button>
+          <button class="dashboard-item__switch">
+            Weekly
+          </button>
+          <button class="dashboard-item__switch">
+            Monthly
+          </button>
+        </div>
+      </section>
+      <section class="dashboard-item dashboard-item__work rounded-xl lg:w-full h-3/4 lg:h-full" data-title="work">
+        <div class="img-container flex justify-end pr-4 h-1/4 relative rounded-t-xl overflow-hidden">
+          <img src="images/icon-work.svg" alt="Work icon" class="absolute -top-4">
+        </div>
+        <div class="dashboard-item__data-section h-3/4 px-4 flex flex-col justify-center rounded-t-xl relative">
+          <div class="dashboard-item__data-section-heading flex items-center justify-between mb-2">
+            <span class="text-slate-200">Work</span>
+            <span class="ellipsis-icon"></span>
+          </div>
+          <div class="dashboard-item__data-section-content flex items-center justify-between">
+            <span class="current-hrs text-slate-200 text-3xl mr-4"></span>
+            <span class="last-hrs text-gray-400"></span>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-item dashboard-item__play rounded-xl h-3/4 lg:h-full" data-title="play">
+        <div class="img-container flex justify-end pr-4 h-1/4 relative overflow-hidden rounded-t-xl">
+          <img src="images/icon-play.svg" alt="Play icon" class="absolute -top-4">
+        </div>
+        <div class="dashboard-item__data-section h-3/4 px-4 flex flex-col justify-center rounded-t-xl relative">
+          <div class="dashboard-item__data-section-heading flex items-center justify-between mb-2">
+            <span class="text-slate-200">Play</span>
+            <span class="ellipsis-icon"></span>
+          </div>
+          <div class="dashboard-item__data-section-content flex items-center justify-between">
+            <span class="current-hrs text-slate-200 text-3xl mr-4"></span>
+            <span class="last-hrs text-gray-400"></span>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-item dashboard-item__study rounded-xl h-3/4 lg:h-full" data-title="study">
+        <div class="img-container flex justify-end pr-4 h-1/4 relative overflow-hidden rounded-t-xl">
+          <img src="images/icon-study.svg" alt="Study icon" class="absolute -top-4">
+        </div>
+        <div class="dashboard-item__data-section h-3/4 px-4 flex flex-col justify-center rounded-t-xl relative">
+          <div class="dashboard-item__data-section-heading flex items-center justify-between mb-2">
+            <span class="text-slate-200">Study</span>
+            <span class="ellipsis-icon"></span>
+          </div>
+          <div class="dashboard-item__data-section-content flex items-center justify-between">
+            <span class="current-hrs text-slate-200 text-3xl mr-4"></span>
+            <span class="last-hrs text-gray-400"></span>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-item dashboard-item__exercise rounded-xl h-3/4 lg:h-full" data-title="exercise">
+        <div class="img-container flex justify-end pr-4 h-1/4 relative overflow-hidden rounded-t-xl">
+          <img src="images/icon-exercise.svg" alt="Exercise icon" class="absolute -top-4">
+        </div>
+        <div class="dashboard-item__data-section h-3/4 px-4 flex flex-col justify-center rounded-t-xl relative">
+          <div class="dashboard-item__data-section-heading flex items-center justify-between mb-2">
+            <span class="text-slate-200">Exercise</span>
+            <span class="ellipsis-icon"></span>
+          </div>
+          <div class="dashboard-item__data-section-content flex items-center justify-between">
+            <span class="current-hrs text-slate-200 text-3xl mr-4"></span>
+            <span class="last-hrs text-gray-400"></span>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-item dashboard-item__social rounded-xl h-3/4 lg:h-full" data-title="social">
+        <div class="img-container flex justify-end pr-4 h-1/4 relative overflow-hidden rounded-t-xl">
+          <img src="images/icon-social.svg" alt="Social icon" class="absolute -top-4">
+        </div>
+        <div class="dashboard-item__data-section h-3/4 px-4 flex flex-col justify-center rounded-t-xl relative">
+          <div class="dashboard-item__data-section-heading flex items-center justify-between mb-2">
+            <span class="text-slate-200">Social</span>
+            <span class="ellipsis-icon"></span>
+          </div>
+          <div class="dashboard-item__data-section-content flex items-center justify-between">
+            <span class="current-hrs text-slate-200 text-3xl mr-4"></span>
+            <span class="last-hrs text-gray-400"></span>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-item dashboard-item__self-care rounded-xl h-3/4 lg:h-full" data-title="self-care">
+        <div class="img-container flex justify-end pr-4 h-1/4 relative overflow-hidden rounded-t-xl">
+          <img src="images/icon-self-care.svg" alt="Self care icon" class="absolute -top-4">
+        </div>
+        <div class="dashboard-item__data-section h-3/4 px-4 flex flex-col justify-center rounded-t-xl relative">
+          <div class="dashboard-item__data-section-heading flex items-center justify-between mb-2">
+            <span class="text-slate-200">Self care</span>
+            <span class="ellipsis-icon"></span>
+          </div>
+          <div class="dashboard-item__data-section-content flex items-center justify-between">
+            <span class="current-hrs text-slate-200 text-3xl mr-4"></span>
+            <span class="last-hrs text-gray-400"></span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

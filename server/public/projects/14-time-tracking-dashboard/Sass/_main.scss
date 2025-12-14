@@ -1,0 +1,76 @@
+.dashboard-container {
+  background-color: $container-background;
+}
+
+.dashboard-item {
+  background-color: $dashboard-item-background;
+}
+
+.dashboard-item__switch.active {
+  color: white;
+  font-weight: 500;
+}
+
+.dashboard-item__user-section {
+  background-color: $dashboard-item-user-section-background;
+}
+
+.dashboard-item__work .img-container {
+  background-color: $dashboard-item-work-background;
+}
+
+.dashboard-item__play .img-container {
+  background-color: $dashboard-item-play-background;
+}
+
+.dashboard-item__study .img-container {
+  background-color: $dashboard-item-study-background;
+}
+
+.dashboard-item__exercise .img-container {
+  background-color: $dashboard-item-exercise-background;
+}
+
+.dashboard-item__social .img-container {
+  background-color: $dashboard-item-social-background;
+}
+
+.dashboard-item__self-care .img-container {
+  background-color: $dashboard-item-self-care-background;
+}
+
+.dashboard-item__data-section {
+  background-color: $dashboard-item-background;
+  box-shadow: 0 -10px 0 0 $dashboard-item-background;
+
+  &:hover {
+    background-color: $dashboard-item-hover;
+    box-shadow: 0 -10px 0 0 $dashboard-item-hover;
+    cursor: pointer;
+  }
+}
+
+.dashboard-item__work,
+.dashboard-item__play,
+.dashboard-item__study,
+.dashboard-item__exercise,
+.dashboard-item__social,
+.dashboard-item__self-care {
+  display: none;
+}
+
+.ellipsis-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  mask-image: url('../images/icon-ellipsis.svg');
+  -webkit-mask-image: url('../images/icon-ellipsis.svg');
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $tailwind-gray-400;
+
+  &:hover {
+    background-color: white;
+  }
+}
