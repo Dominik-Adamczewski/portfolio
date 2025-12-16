@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-proj-16-strong-cyan: hsl(172, 67%, 45%);
+  --color-proj-16-very-dark-cyan: hsl(183, 100%, 15%);
+  --color-proj-16-grayish-cyan: hsl(184, 14%, 56%);
+  --color-proj-16-light-grayish-cyan: hsl(185, 41%, 84%);
+  --color-proj-16-very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
