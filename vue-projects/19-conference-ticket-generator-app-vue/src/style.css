@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-proj-19-neutral-0: hsl(0, 0%, 100%);
+  --color-proj-19-neutral-300: hsl(252, 6%, 83%);
+  --color-proj-19-neutral-500: hsl(245, 15%, 58%);
+  --color-proj-19-neutral-700: hsl(245, 19%, 35%);
+  --color-proj-19-neutral-900: hsl(248, 70%, 10%);
+  --color-proj-19-orange-500: hsl(7, 88%, 67%);
+  --color-proj-19-orange-700: hsl(7, 71%, 60%);
+  --color-proj-19-gradient-red: hsl(7, 86%, 67%);
+  --color-proj-19-gradient-white: hsl(0, 0%, 100%);
+}
