@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-proj-22-very-dark-blue: hsl(220, 13%, 13%);
+  --color-proj-22-dark-grayish-blue: hsl(219, 9%, 45%);
+  --color-proj-22-grayish-blue: hsl(220, 14%, 75%);
+  --color-proj-22-light-grayish-blue: hsl(223, 64%, 98%);
+  --color-proj-22-orange: hsl(16, 100%, 46%);
+  --color-proj-22-orange-hover: hsl(16, 100%, 62%);
+}
