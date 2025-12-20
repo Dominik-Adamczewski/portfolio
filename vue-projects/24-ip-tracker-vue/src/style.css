@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-proj-24-very-dark-gray: hsl(0, 0%, 17%);
+  --color-proj-24-dark-gray: hsl(0, 0%, 59%);
+}
