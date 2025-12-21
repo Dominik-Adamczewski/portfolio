@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-proj-27-blue-900-dark-mode: hsl(209, 23%, 22%);
+  --color-proj-27-blue-950-dark-mode: hsl(207, 26%, 17%);
+  --color-proj-27-grey-950-light-mode: hsl(200, 15%, 8%);
+  --color-proj-27-grey-400-light-mode: hsl(0, 0%, 50%);
+  --color-proj-27-grey-50-light-mode: hsl(0, 0%, 95%);
+}
