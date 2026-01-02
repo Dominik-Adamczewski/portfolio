@@ -1,7 +1,9 @@
 <script setup>
-import Portfolio from './views/Portfolio.vue'
+import MobileNavigationBar from './components/MobileNavigationBar.vue';
 </script>
 
 <template>
-  <Portfolio />
+  <div class="container">
+    <MobileNavigationBar />
+  </div>
 </template>
