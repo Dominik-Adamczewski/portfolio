@@ -11,12 +11,33 @@ const toggleHamburgerMenu = () => {
 }
 </script>
 
+<style scoped>
+  .menu-enter-active,
+  .menu-leave-active {
+    transition: all 0.3s ease;
+    transform-origin: top;
+    overflow: hidden;
+  }
+
+  .menu-enter-from,
+  .menu-leave-to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  .menu-enter-to,
+  .menu-leave-from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+</style>
+
 <template>
-  <nav class="flex items-center justify-between p-4 w-full">
-    <NameLogo />
-    <MenuIcon :is-menu-open="isHamburgerMenuOpen" @click="toggleHamburgerMenu" />
-  </nav>
-  <div v-if="isHamburgerMenuOpen">
-    <LinkItems />
-  </div>
+  <NameLogo />
+  <MenuIcon :is-menu-open="isHamburgerMenuOpen" @click="toggleHamburgerMenu" />
+  <Transition name="menu">
+    <div v-if="isHamburgerMenuOpen" class="absolute top-14 left-0 bg-white w-full p-4 z-10">
+      <LinkItems />
+    </div>
+  </Transition>
 </template>
