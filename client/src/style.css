@@ -2,7 +2,11 @@
 
 @theme {
   --color-portfolio-primary-blue: #4169E1;
+  --color-portfolio-light-blue: #E8EAF6;
   --color-portfolio-primary-blue-lightest: #BDCBFA;
   --color-portfolio-blue-tinted-gray: #E0E7FF;
   --color-portfolio-primary-purple: #7C3AED;
+  --color-portfolio-primary-yellow: #FCD34D;
+  --color-portfolio-primary-green: #10B981;
+  --color-portfolio-primary-red: #EF4444;
 }

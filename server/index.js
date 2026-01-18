@@ -19,6 +19,17 @@ app.use((req, res, next) => {
 // Serve static files from "projects" directory
 app.use('/projects', express.static(path.join(__dirname, 'public', 'projects')));
 
+// Load metadata about projects
+const metaDataPath = path.join(__dirname, 'data', 'projects-metadata.json');
+let projectsMetaData = {};
+
+try {
+  const metadataContent = fs.readFileSync(metaDataPath, 'utf-8');
+  projectsMetaData = JSON.parse(metadataContent);
+} catch (error) {
+  console.error('❌ Error loading project metadata:', error);
+}
+
 // API: Get all projects
 app.get('/api/projects', (req, res) => {
   const projectsDir = path.join(__dirname, 'public', 'projects')
@@ -33,11 +44,17 @@ app.get('/api/projects', (req, res) => {
         return fs.statSync(projectPath).isDirectory()
       })
       .map(name => ({
-        id: name,
+        id: Number(name.split('-')[0]),
         name: name,
-        title: name.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        url: `${baseUrl}/projects/${name}/index.html`  // Full URL in dev
+        title: name
+          .split('-')
+          .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+          .slice(1)
+          .join(' '),
+        url: `${baseUrl}/projects/${name}/index.html`,  // Full URL in dev,
+        metaData: projectsMetaData[name] || {}
       }))
+      .sort((a, b) => a.id - b.id)
     
     console.log('✅ Found projects:', projects.length)
     res.json({ success: true, projects, count: projects.length })

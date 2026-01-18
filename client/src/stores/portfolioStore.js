@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import { api } from '../services/api';
 
 export const usePortfolioStore = defineStore('portfolioStore', {
   state: () => ({
@@ -27,7 +28,18 @@ export const usePortfolioStore = defineStore('portfolioStore', {
         skills: ['Playwright', 'JavaScript', 'CI/CD', 'API Testing', 'Jenkins']
       }
     ],
+    projects: []
   }),
   getters: {},
-  actions: {}
+  actions: {
+    async fetchProjects() {
+      try {
+        const response = await api.getProjects()
+        this.projects = response.projects;
+        console.log('Projects fetched successfully:', this.projects);
+      } catch (err) {
+        throw new Error(err.message);
+      }
+    }
+  }
 });

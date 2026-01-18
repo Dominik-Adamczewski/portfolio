@@ -1,0 +1,164 @@
+{
+  "1-qr-code-component": {
+    "technologies": ["HTML", "CSS"],
+    "description": "Simple QR code component. Good as a first step into HTML and CSS.",
+    "image": "/images/1-qr-code-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "2-order-summary-component": {
+    "technologies": ["HTML", "CSS"],
+    "description": "Order summary component with few buttons and hover effects. Great for beginners.",
+    "image": "/images/2-order-summary-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "3-three-column-component": {
+    "technologies": ["HTML", "CSS"],
+    "description": "Three column component with icons and hover effects. Introduces first layout changes beteween desktop and mobile.",
+    "image": "/images/3-three-column-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "4-single-price-grid-component": {
+    "technologies": ["HTML", "CSS"],
+    "description": "Single price grid component with hover effects and responsive layout. Introduces dividing component for three parts.",
+    "image": "/images/4-single-price-grid-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "5-component-with-sign-up-form": {
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "description": "Responsive sign up form. It includes basic form validation and is nice first step into connecting JavaScript to the project.",
+    "image": "/images/5-component-with-sign-up-form/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "6-interactive-rating-component": {
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "description": "Small, rating component with two steps included. Choosing the number moves the user to a \"Thank you\" page. Nice project to practice handling user interactions and updating the DOM.",
+    "image": "/images/6-interactive-rating-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "7-faq-accordion-card-component": {
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "description": "FAQ accordion card component. Good project to learn dynamically adding CSS classes with JavaScript.",
+    "image": "/images/7-faq-accordion-card-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "8-base-apparel-coming-soon-component": {
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "description": "Simple landing page with basic email validation. Allows to practice form validation + using negative margins.",
+    "image": "/images/8-base-apparel-coming-soon-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "9-article-preview-component": {
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "description": "Article preview component with hover effects. Clicking 'share' button, displays social media icons.",
+    "image": "/images/9-article-preview-component/thumbnail.png",
+    "difficulty": "Newbie"
+  },
+  "10-advice-generator-app": {
+    "technologies": ["HTML", "CSS", "JavaScript", "API"],
+    "description": "Random advice generator app. Fetches data from an external API and displays it to the user. Great project to practice working with APIs.",
+    "image": "/images/10-advice-generator-app/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "11-fylo-landing-page-project": {
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "description": "Landing page for a fictional cloud storage service. Includes responsive design, interactive elements and allows to practice flexbox.",
+    "image": "/images/11-fylo-landing-page-project/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "12-interactive-pricing-component": {
+    "technologies": ["HTML", "CSS", "SCSS", "JavaScript"],
+    "description": "Interactive pricing component with toggle switch to change between monthly and yearly billing and slider to define price.",
+    "image": "/images/12-interactive-pricing-component/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "13-tip-calculator-app": {
+    "technologies": ["HTML", "CSS", "SCSS", "JavaScript"],
+    "description": "Tip calculator app that allows users to calculate the tip amount and total bill per person based on the number of people splitting the bill.",
+    "image": "/images/13-tip-calculator-app/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "14-time-tracking-dashboard": {
+    "technologies": ["HTML", "CSS", "SCSS", "JavaScript"],
+    "description": "Time tracking dashboard that displays time spent on various activities. Users can switch between daily, weekly, and monthly views. First projects which fetches data from a local JSON file.",
+    "image": "/images/14-time-tracking-dashboard/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "15-contact-form": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js"],
+    "description": "Contact form with floating labels and real-time validation. First project where I used a JavaScript framework (Vue.js).",
+    "image": "/images/15-contact-form/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "16-tip-calculator-app": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js"],
+    "description": "Tip calculator app built with Vue.js and Tailwind CSS. Similar functionality to the previous tip calculator app, but implemented using Vue.js to get a grasp on what it's like to rewrite to newer technology.",
+    "image": "/images/16-tip-calculator-app/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "17-product-list-with-cart-app": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Pinia"],
+    "description": "Product list with shopping cart functionality. Users can add products to the cart, view the cart contents, and remove items from the cart. Written with Vue.js and Pinia for state management.",
+    "image": "/images/17-product-list-with-cart-app/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "18-static-job-listings": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Vuex"],
+    "description": "Static job listings page with filtering functionality. Users can filter job listings based on criteria such as role, level, languages, and tools. Built with Vue.js.",
+    "image": "/images/18-static-job-listings/thumbnail.png",
+    "difficulty": "Intermediate"
+  },
+  "19-conference-ticket-generator": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js"],
+    "description": "Conference ticket generator app that allows users to select ticket types, add extras, and see the total price. Form collects information necessary for generating a ticket, which is displayed and generated with random ID.",
+    "image": "/images/19-conference-ticket-generator/thumbnail.png",
+    "difficulty": "Junior"
+  },
+  "20-to-do-app": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Vuex"],
+    "description": "To-do app with task management functionality. Users can add, edit, delete, and mark tasks as completed. Tasks are persisted in local storage to retain data across sessions.",
+    "image": "/images/20-to-do-app/thumbnail.png",
+    "difficulty": "Intermediate"
+  },
+  "21-url-shortening-api": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "API", "Pinia"],
+    "description": "URL shortening app that allows users to shorten long URLs using an external API. Users can input a URL, receive a shortened version, and copy it to the clipboard.",
+    "image": "/images/21-url-shortening-api/thumbnail.png",
+    "difficulty": "Intermediate"
+  },
+  "22-ecommerce-product-page": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Pinia"],
+    "description": "E-commerce product page with image gallery, product options, and shopping cart functionality. Users can view product images, select options, and add items to the cart. I was using lightbox for the image gallery.",
+    "image": "/images/22-ecommerce-product-page/thumbnail.png",
+    "difficulty": "Intermediate"
+  },
+  "23-calculator-app": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Pinia"],
+    "description": "Calculator app with basic arithmetic operations. Users can perform calculations using a user-friendly interface. The app handles input and displays results dynamically. Calculator has 3 themes defined, which can be switched anytime while using the app.",
+    "image": "/images/23-calculator-app/thumbnail.png",
+    "difficulty": "Intermediate"
+  },
+  "24-ip-tracker": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "API", "Pinia"],
+    "description": "IP tracker app that allows users to track IP addresses and view their geographical location on a map. The app fetches data from an external API and displays it using Leaflet.js for map rendering. Map was generated using leaflet library.",
+    "image": "/images/24-ip-tracker/thumbnail.png",
+    "difficulty": "Intermediate"
+  },
+  "25-multi-step-form": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Pinia"],
+    "description": "Multi-step form with progress tracking and validation. Users can navigate through 4 different steps of the form, with each step collecting specific information. The form includes validation to ensure data integrity before proceeding to the next step. Additionally, content of the form changes, depending on Monthly / Yearly choice.",
+    "image": "/images/25-multi-step-form/thumbnail.png",
+    "difficulty": "Advanced"
+  },
+  "26-rock-paper-scissors": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "Pinia"],
+    "description": "Rock, Paper, Scissors game with score tracking and animations. Users can play against the computer, with the app keeping track of wins, losses, and ties. The game includes animations for a more engaging user experience.",
+    "image": "/images/26-rock-paper-scissors/thumbnail.png",
+    "difficulty": "Advanced"
+  },
+  "27-rest-countries-api": {
+    "technologies": ["HTML", "CSS", "tailwindcss", "JavaScript", "Vue.js", "API", "Pinia"],
+    "description": "Rest Countries API app that allows users to search and filter countries based on various criteria. The app fetches data from the Rest Countries API and displays information such as country name, population, region, and capital. Users can also view detailed information about each country, including bordering countries.",
+    "image": "/images/27-rest-countries-api/thumbnail.png",
+    "difficulty": "Advanced"
+  }
+}
