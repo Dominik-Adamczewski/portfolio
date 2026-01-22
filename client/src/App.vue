@@ -5,6 +5,7 @@ import SummarySection from './components/SummarySection.vue';
 import BaseSection from './components/BaseSection.vue';
 import WorkExperienceItem from './components/work-experience/WorkExperienceItem.vue';
 import ProjectCard from './components/front-end-projects/ProjectCard.vue';
+import Carousel from './components/Carousel.vue';
 
 import { usePortfolioStore } from './stores/portfolioStore';
 
@@ -34,7 +35,7 @@ onMounted(async () => {
         <p class="text-sm text-gray-400 leading-6 mt-2">Explore my collection of front-end development projects.</p>
         <p class="text-sm text-gray-400 leading-6 mt-2 italic">All projects were created based on the designs from <a href="https://www.frontendmentor.io/" class="text-blue-500 hover:underline">Frontend Mentor</a> challenges.</p>
         <div v-if="store.projects.length > 0" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          <ProjectCard v-for="project in store.projects" :key="project.id" :projectData="project" />
+          <Carousel :dataArray="store.projects" />
         </div>
       </BaseSection>
     </main>
