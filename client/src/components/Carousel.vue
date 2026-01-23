@@ -3,7 +3,7 @@ import { defineProps, ref } from 'vue';
 import ProjectCard from './front-end-projects/ProjectCard.vue';
 
 const props = defineProps({
-  dataArray: {
+  items: {
     type: Array,
     required: true
   }
@@ -23,8 +23,8 @@ const handleScroll = (e) => {
     ref="carouselRef" 
     @scroll="handleScroll"
     class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mr-8">
-    <li v-for="(dataItem, index) in props.dataArray" :key="index" class="shrink-0 snap-start first:ml-0 last:mr-8 max-w-80">
-      <ProjectCard :projectData="dataItem" />
+    <li v-for="(item, index) in props.items" :key="index" class="shrink-0 snap-start first:ml-0 last:mr-8 max-w-80">
+      <slot :item="item" :index="index"></slot>
     </li>
   </ul>
 </template>

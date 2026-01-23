@@ -28,7 +28,13 @@ export const usePortfolioStore = defineStore('portfolioStore', {
         skills: ['Playwright', 'JavaScript', 'CI/CD', 'API Testing', 'Jenkins']
       }
     ],
-    projects: []
+    projects: [],
+    techSkills: [
+      { name: 'Playwright', lvl: 3 },
+      { name: 'Puppeteer', lvl: 2 },
+      { name: 'Postman', lvl: 1 },
+      { name: 'JavaScript', lvl: 4 }
+    ],
   }),
   getters: {},
   actions: {
