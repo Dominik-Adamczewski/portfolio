@@ -35,6 +35,12 @@ export const usePortfolioStore = defineStore('portfolioStore', {
       { name: 'Postman', lvl: 1 },
       { name: 'JavaScript', lvl: 4 }
     ],
+    certificates: [
+      { name: 'ISTQB Foundation Level', details: ['Issuer: SJSI', 'Date: 2023', 'ID: AAAA-BBBB-CCCC-DDDD'], color: 'yellow' },
+    ],
+    courses: [
+      { name: 'Automated Software Testing with Playwright', issuer: 'Udemy', date: '2023', link: 'https://www.udemy.com/certificate/UC-XXXXXX/' },
+    ]
   }),
   getters: {},
   actions: {

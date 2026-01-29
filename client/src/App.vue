@@ -7,6 +7,8 @@ import WorkExperienceItem from './components/work-experience/WorkExperienceItem.
 import ProjectCard from './components/front-end-projects/ProjectCard.vue';
 import TechSkill from './components/tech-skills/TechSkill.vue';
 import Carousel from './components/Carousel.vue';
+import CertificateCard from './components/certifications-and-courses/CertificateCard.vue';
+import CourseCard from './components/certifications-and-courses/CourseCard.vue';
 
 import { usePortfolioStore } from './stores/portfolioStore';
 
@@ -45,6 +47,23 @@ onMounted(async () => {
       </BaseSection>
       <BaseSection title="Technical Skills" id="skills" class="bg-linear-to-br from-gray-50 to-portfolio-light-purple">
         <TechSkill v-for="(skill, index) in store.techSkills" :key="index" :skill="skill" class="mb-3" />
+      </BaseSection>
+      <BaseSection title="Certifications & Courses" id="certifications-and-courses" class="bg-linear-to-br from-gray-50 to-portfolio-light-purple">
+        <h3 class="text-lg font-semibold mb-2">Certifications</h3>
+        <CertificateCard
+          v-for="(certificate, index) in store.certificates"
+          :key="index"
+          :certificate="certificate"
+          :iconColor="certificate.color"
+        />
+        <h3 class="text-lg font-semibold mb-2 mt-4">Courses</h3>
+        <CourseCard
+          v-for="(course, index) in store.courses"
+          :key="index"
+          iconType="code"
+          iconColor="blue"
+          :course="course"
+        />
       </BaseSection>
     </main>
   </div>
