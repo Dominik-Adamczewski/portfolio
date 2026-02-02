@@ -37,7 +37,7 @@ const toggleHamburgerMenu = () => {
   <MenuIcon :is-menu-open="isHamburgerMenuOpen" @click="toggleHamburgerMenu" />
   <Transition name="menu">
     <div v-if="isHamburgerMenuOpen" class="absolute top-14 left-0 bg-white w-full p-4 z-10">
-      <LinkItems />
+      <LinkItems @link-clicked="toggleHamburgerMenu" />
     </div>
   </Transition>
 </template>

@@ -9,6 +9,8 @@ import TechSkill from './components/tech-skills/TechSkill.vue';
 import Carousel from './components/Carousel.vue';
 import CertificateCard from './components/certifications-and-courses/CertificateCard.vue';
 import CourseCard from './components/certifications-and-courses/CourseCard.vue';
+import EducationCard from './components/education/EducationCard.vue';
+import Footer from './components/footer/Footer.vue';
 
 import { usePortfolioStore } from './stores/portfolioStore';
 
@@ -20,7 +22,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="container relative">
+  <div class="relative">
     <nav class="flex items-center justify-between p-4 w-full">
       <MobileNavigationBar />
     </nav>
@@ -33,6 +35,9 @@ onMounted(async () => {
       </BaseSection>
       <BaseSection title="Work Experience" id="experience" class="bg-linear-to-br from-portfolio-blue-tinted-gray to-white">
         <WorkExperienceItem v-for="(workExperienceItem, index) in store.workExperienceItems" :key="index" :experienceData="workExperienceItem" />
+      </BaseSection>
+      <BaseSection title="Education" id="education" class="bg-linear-to-br from-portfolio-blue-tinted-gray to-white">
+        <EducationCard v-for="(educationItem, index) in store.educationItems" :key="index" :education="educationItem" />
       </BaseSection>
       <BaseSection title="Front End Projects" id="projects">
         <p class="text-sm text-gray-400 leading-6 mt-2">Explore my collection of front-end development projects.</p>
@@ -66,5 +71,8 @@ onMounted(async () => {
         />
       </BaseSection>
     </main>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 </template>

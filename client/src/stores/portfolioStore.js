@@ -5,11 +5,11 @@ export const usePortfolioStore = defineStore('portfolioStore', {
   state: () => ({
     navbarLinks: [
       { name: 'About', href: '#about' },
-      { name: 'Education', href: '#education' },
       { name: 'Experience', href: '#experience' },
+      { name: 'Education', href: '#education' },
       { name: 'Projects', href: '#projects' },
       { name: 'Skills', href: '#skills' },
-      { name: 'Certifications', href: '#certifications' },
+      { name: 'Certifications', href: '#certifications-and-courses' },
     ],
     aboutMeParagraphs: [
       'I am a detail-oriented Quality Assurance Specialist with a passion for breaking things just so they can be fixed stronger. My expertise lies in bridging the gap between development and operations through rigorous testing frameworks and automated solutions.',
@@ -27,6 +27,10 @@ export const usePortfolioStore = defineStore('portfolioStore', {
         ],
         skills: ['Playwright', 'JavaScript', 'CI/CD', 'API Testing', 'Jenkins']
       }
+    ],
+    educationItems: [
+      { degree: 'master', name: 'Master of Science in Software Engineering', institution: 'Tech University', description: 'Lotem ipsum dupson deloarean matko bosko', date: '2022' },
+      { degree: 'bachelor', name: 'Bachelor of Science in Computer Science', institution: 'University of Technology', description: 'Lotem ipsum dupson deloarean matko bosko', date: '2020' }
     ],
     projects: [],
     techSkills: [
