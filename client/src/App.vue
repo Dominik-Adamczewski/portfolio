@@ -1,11 +1,12 @@
 <script setup>
 import { onMounted } from 'vue';  
-import MobileNavigationBar from './components/MobileNavigationBar.vue';
+import NameLogo from './components/navbar/NameLogo.vue';
+import NavigationBar from './components/navbar/NavigationBar.vue';
 import SummarySection from './components/SummarySection.vue';
 import BaseSection from './components/BaseSection.vue';
 import WorkExperienceItem from './components/work-experience/WorkExperienceItem.vue';
 import ProjectCard from './components/front-end-projects/ProjectCard.vue';
-import TechSkill from './components/tech-skills/TechSkill.vue';
+import SkillGroup from './components/tech-skills/SkillGroup.vue';
 import Carousel from './components/Carousel.vue';
 import CertificateCard from './components/certifications-and-courses/CertificateCard.vue';
 import CourseCard from './components/certifications-and-courses/CourseCard.vue';
@@ -23,26 +24,32 @@ onMounted(async () => {
 
 <template>
   <div class="relative">
-    <nav class="flex items-center justify-between p-4 w-full">
-      <MobileNavigationBar />
+    <nav class="flex items-center justify-between p-4 lg:px-24 2xl:px-60 w-full border-b border-gray-300">
+      <NameLogo class="mr-4" />
+      <NavigationBar />
     </nav>
     <main>
       <SummarySection />
-      <BaseSection title="About Me" id="about">
-        <p v-for="(paragraph, index) in store.aboutMeParagraphs" :key="index" class="text-sm text-gray-400 leading-6 mt-2">
+      <BaseSection title="About Me" id="about" class="bg-portfolio-very-light-gray">
+        <p v-for="(paragraph, index) in store.aboutMeParagraphs" :key="index" class="text-sm leading-6 mt-2">
           {{ paragraph }}
         </p>
       </BaseSection>
-      <BaseSection title="Work Experience" id="experience" class="bg-linear-to-br from-portfolio-blue-tinted-gray to-white">
-        <WorkExperienceItem v-for="(workExperienceItem, index) in store.workExperienceItems" :key="index" :experienceData="workExperienceItem" />
+      <BaseSection title="Work Experience" id="experience" class="bg-white">
+        <WorkExperienceItem 
+          v-for="(workExperienceItem, index) in store.workExperienceItems" 
+          :key="index" 
+          :experienceData="workExperienceItem"
+          :is-last="index === store.workExperienceItems.length - 1"
+        />
       </BaseSection>
-      <BaseSection title="Education" id="education" class="bg-linear-to-br from-portfolio-blue-tinted-gray to-white">
+      <BaseSection title="Education" id="education" class="bg-white">
         <EducationCard v-for="(educationItem, index) in store.educationItems" :key="index" :education="educationItem" />
       </BaseSection>
-      <BaseSection title="Front End Projects" id="projects">
-        <p class="text-sm text-gray-400 leading-6 mt-2">Explore my collection of front-end development projects.</p>
-        <p class="text-sm text-gray-400 leading-6 mt-2 italic">All projects were created based on the designs from <a href="https://www.frontendmentor.io/" class="text-blue-500 hover:underline">Frontend Mentor</a> challenges.</p>
-        <div v-if="store.projects.length > 0" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <BaseSection title="Front End Projects" id="projects" class="bg-portfolio-very-light-gray">
+        <p class="text-sm leading-6 mt-2">Explore my collection of front-end development projects.</p>
+        <p class="text-sm leading-6 mt-2 italic">All projects were created based on the designs from <a href="https://www.frontendmentor.io/" class="text-blue-500 hover:underline">Frontend Mentor</a> challenges.</p>
+        <div v-if="store.projects.length > 0" class="gap-6 mt-6">
           <Carousel :items="store.projects">
             <template v-slot:default="{ item }">
               <ProjectCard :projectData="item" />
@@ -50,17 +57,21 @@ onMounted(async () => {
           </Carousel>
         </div>
       </BaseSection>
-      <BaseSection title="Technical Skills" id="skills" class="bg-linear-to-br from-gray-50 to-portfolio-light-purple">
-        <TechSkill v-for="(skill, index) in store.techSkills" :key="index" :skill="skill" class="mb-3" />
+      <BaseSection title="Technical Skills" id="skills" class="bg-white">
+        <div class="lg:flex lg:items-stretch lg:justify-between lg:gap-12">
+          <SkillGroup v-for="(group, index) in store.techSkillsByGroup" :key="index" :name="group.groupLabel" :type="group.group" :skills="group.skills" class="lg:flex-1" />
+        </div>
       </BaseSection>
-      <BaseSection title="Certifications & Courses" id="certifications-and-courses" class="bg-linear-to-br from-gray-50 to-portfolio-light-purple">
+      <BaseSection title="Certifications & Courses" id="certifications-and-courses" class="bg-portfolio-very-light-gray">
         <h3 class="text-lg font-semibold mb-2">Certifications</h3>
-        <CertificateCard
-          v-for="(certificate, index) in store.certificates"
-          :key="index"
-          :certificate="certificate"
-          :iconColor="certificate.color"
-        />
+        <div class="lg:flex lg:items-center lg:justify-start">
+          <CertificateCard
+            v-for="(certificate, index) in store.certificates"
+            :key="index"
+            :certificate="certificate"
+            :iconColor="certificate.color"
+          />
+        </div>
         <h3 class="text-lg font-semibold mb-2 mt-4">Courses</h3>
         <CourseCard
           v-for="(course, index) in store.courses"

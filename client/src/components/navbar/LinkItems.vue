@@ -8,9 +8,9 @@ const store = usePortfolioStore();
 </script>
 
 <template>
-  <ul>
-    <li v-for="(navbarLink, index) in store.navbarLinks" :key="index" class="mb-4">
-      <a :href="navbarLink.href" @click="emits('linkClicked')" class="text-lg font-medium text-black hover:underline">
+  <ul class="lg:flex">
+    <li v-for="(navbarLink, index) in store.navbarLinks" :key="index" class="mb-4 lg:mb-0 lg:mr-6">
+      <a :href="navbarLink.href" @click="emits('linkClicked')" class="text-lg font-medium text-gray-600 hover:underline">
         {{ navbarLink.name }}
       </a>
     </li>

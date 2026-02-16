@@ -26,6 +26,17 @@ export const usePortfolioStore = defineStore('portfolioStore', {
           'Conducted API testing using Postman and RestAssured, identifying critical security vulnerabilities before launch.'
         ],
         skills: ['Playwright', 'JavaScript', 'CI/CD', 'API Testing', 'Jenkins']
+      },
+      {
+        position: 'Senior QA Engineer',
+        company: 'TechFlow Solutions',
+        duration: 'Jan 2022 - Present',
+        descriptionListItems: [
+          'Led a team of 4 QA Engineers, establishing best practices for automation frameworks using Playwright and JavaScript.',
+          'Reduced regression testing time by 40% by implementing a robust CI/CD pipeline integration with Jenkins.',
+          'Conducted API testing using Postman and RestAssured, identifying critical security vulnerabilities before launch.'
+        ],
+        skills: ['Playwright', 'JavaScript', 'CI/CD', 'API Testing', 'Jenkins']
       }
     ],
     educationItems: [
@@ -33,11 +44,29 @@ export const usePortfolioStore = defineStore('portfolioStore', {
       { degree: 'bachelor', name: 'Bachelor of Science in Computer Science', institution: 'University of Technology', description: 'Lotem ipsum dupson deloarean matko bosko', date: '2020' }
     ],
     projects: [],
-    techSkills: [
-      { name: 'Playwright', lvl: 3 },
-      { name: 'Puppeteer', lvl: 2 },
-      { name: 'Postman', lvl: 1 },
-      { name: 'JavaScript', lvl: 4 }
+    techSkillsByGroup: [
+      { 
+        group: 'automation', 
+        groupLabel: 'Automation',
+        skills: [
+          { name: 'Playwright', lvl: 3 },
+          { name: 'Puppeteer', lvl: 2 }
+        ] 
+      },
+      { 
+        group: 'tools',
+        groupLabel: 'Tools',
+        skills: [
+          { name: 'Postman', lvl: 1 }
+        ]
+      },
+      { 
+        group: 'programmingLanguages', 
+        groupLabel: 'Programming Languages',
+        skills: [
+          { name: 'JavaScript', lvl: 4 }
+        ]
+      }
     ],
     certificates: [
       { name: 'ISTQB Foundation Level', details: ['Issuer: SJSI', 'Date: 2023', 'ID: AAAA-BBBB-CCCC-DDDD'], color: 'yellow' },

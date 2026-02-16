@@ -28,7 +28,7 @@ const getChipColor = (difficulty) => {
 
 <template>
   <a :href="projectData.url" target="_blank">
-    <div class="bg-gray-100 rounded-md p-4 w-72 lg:w-80 h-full flex flex-col">
+    <div class="bg-white rounded-md p-4 w-72 lg:w-80 h-full flex flex-col">
       <div class="h-44 w-full overflow-hidden rounded-md bg-gray-400 shrink-0">
         <img 
           v-if="projectData.metaData.image"

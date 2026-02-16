@@ -12,16 +12,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="w-full bg-white rounded-md p-4">
-    <div class="flex itemst-center justify-between">
-      <div>
-        {{ props.skill.name }}
-      </div>
-      <div>
-        <span>
-          <LvlCircles :lvl="props.skill.lvl" />
-        </span>
-      </div>
+  <div class="flex items-center justify-between">
+    <div class="max-w-1/2">
+      {{ props.skill.name }}
+    </div>
+    <div>
+      <span>
+        <LvlCircles :lvl="props.skill.lvl" />
+      </span>
     </div>
   </div>
 </template>

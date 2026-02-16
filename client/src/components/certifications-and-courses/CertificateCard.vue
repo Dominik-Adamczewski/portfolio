@@ -30,18 +30,19 @@ const iconBacgkgroundClasses = {
 </script>
 
 <template>
-  <div class="w-full bg-white rounded-md p-4 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <div class="p-4 rounded-full" :class="iconBacgkgroundClasses[iconColor]">
+  <div class="w-full bg-white rounded-md p-4 flex items-center lg:items-stretch justify-between lg:w-68 lg:min-h-60">
+    <div class="flex items-center gap-4 lg:flex-col lg:items-start lg:w-full">
+      <div class="p-4 rounded-full lg:shrink-0" :class="iconBacgkgroundClasses[iconColor]">
         <i class="fa-solid fa-medal text-xl" :class="iconColorClasses[iconColor]"></i>
       </div>
-      <div>
-        <p class="font-semibold">{{ certificate.name }}</p>
-        <div>
-          <span class="text-xs text-gray-400" v-for="(item, index) in certificate.details" :key="index">
-            {{ item }}
-            <span v-if="index < certificate.details.length - 1">• </span>
-          </span>
+      <div class="lg:w-full lg:flex lg:flex-col lg:flex-1">
+        <p class="font-semibold lg:text-lg mb-4">{{ certificate.name }}</p>
+        <div class="lg:border-t border-gray-300">
+          <div class="mt-6">
+            <p class="text-xs lg:text-sm text-gray-400 mt-1" v-for="(item, index) in certificate.details" :key="index">
+              {{ item }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
