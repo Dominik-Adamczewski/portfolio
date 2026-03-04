@@ -1,0 +1,16 @@
+[
+  { 
+    "degree": "master", 
+    "name": "Master's degree in Tourism and Recreation", 
+    "institution": "WSB Merito University in Wrocław", 
+    "description": "Specialistaion: Tourism management", 
+    "date": "2017 - 2019" 
+  },
+  { 
+    "degree": "bachelor", 
+    "name": "Bachelor's degree in Tourism and Recreation", 
+    "institution": "State Higher Vocational School in Sulechów", 
+    "description": "Specialization: Hotel business ", 
+    "date": "2014 - 2017" 
+  }
+]

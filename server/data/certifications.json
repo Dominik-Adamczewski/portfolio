@@ -1,0 +1,12 @@
+[
+  { 
+    "name": "ISTQB Certified Tester Foundation Level", 
+    "details": ["Issuer: ISTQB® - International Software Testing Qualifications Board", "Date: 08/2021", "ID: 016667/CTFL/2021"], 
+    "color": "yellow"
+  },
+  {
+    "name": "Cambridge English: B2 First (FCE)",
+    "details": ["Issuer: Cambridge Assessment English", "Date: 06/2020"], 
+    "color": "blue"
+  }
+]

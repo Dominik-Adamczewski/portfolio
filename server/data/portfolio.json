@@ -1,0 +1,16 @@
+{
+  "navbarLinks": [
+    { "name": "About", "href": "#about" },
+    { "name": "Experience", "href": "#experience" },
+    { "name": "Education", "href": "#education" },
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Skills", "href": "#skills" },
+    { "name": "Certifications", "href": "#certifications-and-courses" }
+  ],
+  "aboutMeParagraphs": [
+    "I am a detail-oriented Quality Assurance Specialist with a passion for breaking things just so they can be fixed stronger. Throughout my current experience I was ensuring the best quality of Tagvenue platform by idenifying and reporting all sorts of issues - from simple UI flaws, through functional problems, ending with performance and UX related issues. My experience also includes maintatining and improving email deliverability architecture.",
+    "At some point in my career I started exploring test automation which also led me to learning basic of Frontend technologies. There was a time when I wanted to shift more into becoming Front End Developer. After gaining the necessary knowledge about front end frameworks and actually trying this new responsiblities I realized, that I achieve the biggest work satisfaction by ensuring quality. Nevertheless, this experience allowed me to deeper understand programming, and Front End related concepts used in software development.",
+    "Currently I am expanding my knowledge on few different levels in QA World. I am practicing with API Testing and building CI/CD flow, to be able to build more robust test automation implementations. Additionally, I am interested now in expanging my career into security testing and thus, I started gathering knowledge necessary to perform Security Analyst role, with addition on understanding common website vulnerabilities from area of Penetration Testing.",
+    "I am also staying in touch in regards of AI and its impact on software development and testing. In my current role I was able to implement few different AI automation utilizing Claude and Claude Code, such as Test Cases generator or Playwright E2E tests generator, which allowed me to gain some practical experience in this area and understand better how AI can be used in software development and testing."
+  ]
+}

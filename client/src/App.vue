@@ -24,6 +24,7 @@ const coursesExpanded = ref(false);
 
 onMounted(async () => {
   await store.fetchProjects();
+  await store.fetchAllPortfolioData();
 });
 </script>
 

@@ -1,0 +1,119 @@
+[
+  { 
+    "name": "OWASP ZAP Step-by-step Tutorial", 
+    "issuer": "Arkenstone Learning - YouTube", 
+    "link": "https://www.youtube.com/watch?v=bf2YuqgaeWo&list=PLH8n_ayg-60J9i3nsLybper-DR3zJw6Z5", 
+    "iconType": "book",
+    "iconColor": "yellow"
+  },
+  { 
+    "name": "CI/CD for Test Automation: Jenkins & GitHub Actions", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/cicd-testers/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-9f5ddd4c-c58a-477d-a21f-0bb0099ecc82/",
+    "iconType": "book",
+    "iconColor": "blue"
+  },
+  { 
+    "name": "GenAI & AI Agents for QA Automation | Copilot & Claude code", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/generative-ai-in-software-testing/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-ae55ef7f-1b08-42a7-b2ba-b017a78569a8/",
+    "iconType": "book",
+    "iconColor": "red"
+  },
+  { 
+    "name": "Performance Testing: Introduction to k6 for Beginners", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/k6-load-testing-performance-testing/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-4a6f8e53-0a38-40dc-aee8-d54e8a2b6c17/",
+    "iconType": "code",
+    "iconColor": "green"
+  },
+  { 
+    "name": "Vue JS 3 Tutorial for Beginners", 
+    "issuer": "The Net Ninja - YouTube", 
+    "link": "https://www.youtube.com/watch?v=YrxBCBibVo0&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1", 
+    "iconType": "code",
+    "iconColor": "red"
+  },
+  { 
+    "name": "Complete JavaScript Programming Course From A to Z", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/kurs-programowanie-w-javascript/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-7733d807-bcfb-49cb-9274-54449baed3ed/",
+    "iconType": "code",
+    "iconColor": "green"
+  },
+  { 
+    "name": "Intermediate front-end in 15 intensive days!", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/front-end-zaawansowany/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-8313a2db-0669-42f9-a7f5-50ac3d5d94f5/",
+    "iconType": "code",
+    "iconColor": "green"
+  },
+  { 
+    "name": "Web developer from scratch in 15 days!", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/kurs-web-developer-od-podstaw-w-15-dni/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-26ab7179-fdc9-4f3c-8953-cd1cb75f5057/",
+    "iconType": "code",
+    "iconColor": "green"
+  },
+  { 
+    "name": "Modern JavaScript (Complete guide, from Novice to Ninja)", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-9f3e5a89-a810-4191-b800-cc2fc45cb755/",
+    "iconType": "code",
+    "iconColor": "blue"
+  },
+  { 
+    "name": "Git for beginners", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/kurs-gita/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-df2ebaf9-1a4a-455b-811d-f349c608a8f8/",
+    "iconType": "code",
+    "iconColor": "red"
+  },
+  { 
+    "name": "Playwright: Web Automation Testing From Zero to Hero", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/playwright-from-zero-to-hero/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-9d0e03ad-590b-4a9e-ab2b-88b83d2be8d9/",
+    "iconType": "code",
+    "iconColor": "yellow"
+  },
+  { 
+    "name": "Automated Software Testing with Puppeteer", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/automated-headless-browser-testing-with-puppeteer/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-463216b2-1e2d-4f81-af69-34b7bb853773/",
+    "iconType": "code",
+    "iconColor": "green"
+  },
+  { 
+    "name": "Postman - REST API Testing", 
+    "issuer": "Udemy",
+    "link": "https://www.udemy.com/course/kurs-postman/",
+    "certificateLink": "https://www.udemy.com/certificate/UC-3ddf53ce-1d5c-44e9-ba6a-db8bc7f01f8c/",
+    "iconType": "book",
+    "iconColor": "blue"
+  },
+  { 
+    "name": "ISTQB Foundation Level CTFL training for 2021", 
+    "issuer": "Udemy", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-2198822a-a779-41c4-bddf-253ef0ce24e8/",
+    "iconType": "book",
+    "iconColor": "blue"
+  },
+  { 
+    "name": "Basics of Manual Software Testing", 
+    "issuer": "Udemy", 
+    "link": "https://www.udemy.com/course/kurs-testowania-oprogramowania/", 
+    "certificateLink": "https://www.udemy.com/certificate/UC-13a899ec-d39d-4eba-90e8-207c46e2508e/",
+    "iconType": "book",
+    "iconColor": "blue"
+  }
+]

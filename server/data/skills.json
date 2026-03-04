@@ -1,0 +1,43 @@
+[
+  { 
+    "group": "automation", 
+    "groupLabel": "Automation",
+    "skills": [
+      { "name": "Playwright", "lvl": 4 },
+      { "name": "Puppeteer", "lvl": 3 },
+      { "name": "K6", "lvl": 1 },
+      { "name": "API Testing", "lvl": 1 },
+      { "name": "Jenkins", "lvl": 1 },
+      { "name": "GitHub Actions", "lvl": 1 }
+    ] 
+  },
+  { 
+    "group": "tools",
+    "groupLabel": "Tools",
+    "skills": [
+      { "name": "Jira", "lvl": 4 },
+      { "name": "BrowserStack", "lvl": 3 },
+      { "name": "GlockApps", "lvl": 3 },
+      { "name": "SendGrid", "lvl": 3 },
+      { "name": "Elastic Stack", "lvl": 1 },
+      { "name": "Grafana", "lvl": 1 },
+      { "name": "Rollbar", "lvl": 1 },
+      { "name": "Postman", "lvl": 1 },
+      { "name": "ZAP", "lvl": 1 },
+      { "name": "Claude", "lvl": 2 },
+      { "name": "Git", "lvl": 3 }
+    ]
+  },
+  { 
+    "group": "programmingLanguages", 
+    "groupLabel": "Programming Languages",
+    "skills": [
+      { "name": "JavaScript", "lvl": 4 },
+      { "name": "TypeScript", "lvl": 3 },
+      { "name": "MySQL", "lvl": 3 },
+      { "name": "HTML/CSS", "lvl": 4 },
+      { "name": "Vue.js", "lvl": 2 },
+      { "name": "Bash", "lvl": 1 }
+    ]
+  }
+]

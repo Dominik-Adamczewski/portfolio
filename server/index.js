@@ -6,6 +6,18 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Helper function to load JSON data files
+const loadJsonFile = (filename) => {
+  try {
+    const filePath = path.join(__dirname, 'data', filename);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`Error loading ${filename}:`, error);
+    return null;
+  }
+};
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -30,7 +42,7 @@ try {
   console.error('❌ Error loading project metadata:', error);
 }
 
-// API: Get all projects
+// API: Get all FE projects
 app.get('/api/projects', (req, res) => {
   const projectsDir = path.join(__dirname, 'public', 'projects')
   const baseUrl = process.env.NODE_ENV === 'production' 
@@ -61,6 +73,90 @@ app.get('/api/projects', (req, res) => {
   } catch (error) {
     console.error('❌ Error:', error)
     res.status(500).json({ success: false, error: error.message })
+  }
+});
+
+// Get portfolio general info (navbar, about)
+app.get('/api/portfolio', (req, res) => {
+  const data = loadJsonFile('portfolio.json');
+  if (!data) {
+    return res.status(500).json({ success: false, error: 'Failed to load portfolio data' });
+  }
+  res.json({ success: true, data });
+});
+
+// Get work experience
+app.get('/api/portfolio/experience', (req, res) => {
+  const data = loadJsonFile('experience.json');
+  if (!data) {
+    return res.status(500).json({ success: false, error: 'Failed to load experience data' });
+  }
+  res.json({ success: true, experience: data });
+});
+
+// Get education
+app.get('/api/portfolio/education', (req, res) => {
+  const data = loadJsonFile('education.json');
+  if (!data) {
+    return res.status(500).json({ success: false, error: 'Failed to load education data' });
+  }
+  res.json({ success: true, education: data });
+});
+
+// Get skills
+app.get('/api/portfolio/skills', (req, res) => {
+  const data = loadJsonFile('skills.json');
+  if (!data) {
+    return res.status(500).json({ success: false, error: 'Failed to load skills data' });
+  }
+  res.json({ success: true, techSkillsByGroup: data });
+});
+
+// Get certifications
+app.get('/api/portfolio/certifications', (req, res) => {
+  const data = loadJsonFile('certifications.json');
+  if (!data) {
+    return res.status(500).json({ success: false, error: 'Failed to load certifications data' });
+  }
+  res.json({ success: true, certificates: data });
+});
+
+// Get courses
+app.get('/api/portfolio/courses', (req, res) => {
+  const data = loadJsonFile('courses.json');
+  if (!data) {
+    return res.status(500).json({ success: false, error: 'Failed to load courses data' });
+  }
+  res.json({ success: true, courses: data });
+});
+
+// Get all portfolio data at once (useful for initial load)
+app.get('/api/portfolio/all', (req, res) => {
+  try {
+    const portfolio = loadJsonFile('portfolio.json');
+    const experience = loadJsonFile('experience.json');
+    const education = loadJsonFile('education.json');
+    const skills = loadJsonFile('skills.json');
+    const certificates = loadJsonFile('certifications.json');
+    const courses = loadJsonFile('courses.json');
+
+    if (!portfolio || !experience || !education || !skills || !certificates || !courses) {
+      return res.status(500).json({ success: false, error: 'Failed to load some portfolio data' });
+    }
+
+    res.json({
+      success: true,
+      data: {
+        ...portfolio,
+        workExperienceItems: experience,
+        educationItems: education,
+        techSkillsByGroup: skills,
+        certificates,
+        courses
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 
