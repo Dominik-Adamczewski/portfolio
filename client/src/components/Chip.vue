@@ -24,6 +24,7 @@ const chipColorClasses = {
   green: 'bg-portfolio-primary-green text-white',
   yellow: 'bg-portfolio-primary-yellow text-black',
   red: 'bg-portfolio-primary-red text-white',
+  white: 'bg-white text-black',
 };
 
 const chipSizeClasses = {

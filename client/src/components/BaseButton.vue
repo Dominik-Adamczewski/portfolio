@@ -32,6 +32,7 @@ const buttonColorClasses = {
 const fontAwesomeIcons = {
   download: 'fa-solid fa-download',
   code: 'fa-solid fa-code',
+  linkedIn: 'fa-brands fa-linkedin'
 };
 
 const sizeClasses = {

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';  
+import { onMounted, ref } from 'vue';  
 import NameLogo from './components/navbar/NameLogo.vue';
 import NavigationBar from './components/navbar/NavigationBar.vue';
 import SummarySection from './components/SummarySection.vue';
@@ -12,10 +12,15 @@ import CertificateCard from './components/certifications-and-courses/Certificate
 import CourseCard from './components/certifications-and-courses/CourseCard.vue';
 import EducationCard from './components/education/EducationCard.vue';
 import Footer from './components/footer/Footer.vue';
+import ShowMoreLess from './components/ShowMoreLess.vue';
 
 import { usePortfolioStore } from './stores/portfolioStore';
 
 const store = usePortfolioStore();
+
+const skillsExpanded = ref(false);
+const workExperienceExpanded = ref(false);
+const coursesExpanded = ref(false);
 
 onMounted(async () => {
   await store.fetchProjects();
@@ -36,12 +41,21 @@ onMounted(async () => {
         </p>
       </BaseSection>
       <BaseSection title="Work Experience" id="experience" class="bg-white">
-        <WorkExperienceItem 
-          v-for="(workExperienceItem, index) in store.workExperienceItems" 
-          :key="index" 
-          :experienceData="workExperienceItem"
-          :is-last="index === store.workExperienceItems.length - 1"
-        />
+        <ShowMoreLess
+          :item-count="store.workExperienceItems.length"
+          :is-expanded="workExperienceExpanded"
+          :threshold="1"
+          max-height="max-h-[520px]"
+          from-color="from-white"
+          @toggle="workExperienceExpanded = !workExperienceExpanded"
+        >
+          <WorkExperienceItem
+            v-for="(workExperienceItem, index) in store.workExperienceItems"
+            :key="index"
+            :experienceData="workExperienceItem"
+            :is-last="index === store.workExperienceItems.length - 1"
+          />
+        </ShowMoreLess>
       </BaseSection>
       <BaseSection title="Education" id="education" class="bg-white">
         <EducationCard v-for="(educationItem, index) in store.educationItems" :key="index" :education="educationItem" />
@@ -59,12 +73,21 @@ onMounted(async () => {
       </BaseSection>
       <BaseSection title="Technical Skills" id="skills" class="bg-white">
         <div class="lg:flex lg:items-stretch lg:justify-between lg:gap-12">
-          <SkillGroup v-for="(group, index) in store.techSkillsByGroup" :key="index" :name="group.groupLabel" :type="group.group" :skills="group.skills" class="lg:flex-1" />
+          <SkillGroup
+            v-for="(group, index) in store.getSortedSkillsByGroup"
+            :key="index"
+            :name="group.groupLabel"
+            :type="group.group"
+            :skills="group.skills"
+            :is-expanded="skillsExpanded"
+            @toggle="skillsExpanded = !skillsExpanded"
+            class="lg:flex-1"
+          />
         </div>
       </BaseSection>
       <BaseSection title="Certifications & Courses" id="certifications-and-courses" class="bg-portfolio-very-light-gray">
         <h3 class="text-lg font-semibold mb-2">Certifications</h3>
-        <div class="lg:flex lg:items-center lg:justify-start">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
           <CertificateCard
             v-for="(certificate, index) in store.certificates"
             :key="index"
@@ -73,13 +96,24 @@ onMounted(async () => {
           />
         </div>
         <h3 class="text-lg font-semibold mb-2 mt-4">Courses</h3>
-        <CourseCard
-          v-for="(course, index) in store.courses"
-          :key="index"
-          iconType="code"
-          iconColor="blue"
-          :course="course"
-        />
+        <ShowMoreLess
+          :item-count="store.courses.length"
+          :is-expanded="coursesExpanded"
+          :threshold="1"
+          max-height="max-h-[620px]"
+          from-color="from-white"
+          @toggle="coursesExpanded = !coursesExpanded"
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+            <CourseCard
+              v-for="(course, index) in store.courses"
+              :key="index"
+              :iconType="course.iconType"
+              :iconColor="course.iconColor"
+              :course="course"
+            />
+          </div>
+        </ShowMoreLess>
       </BaseSection>
     </main>
     <footer>
