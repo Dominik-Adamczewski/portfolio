@@ -38,10 +38,10 @@ export const usePortfolioStore = defineStore('portfolioStore', {
         this.techSkillsByGroup = data.techSkillsByGroup || [];
         this.certificates = data.certificates || [];
         this.courses = data.courses || [];
+        await this.fetchProjects();
       } catch (err) {
         this.error = err.message;
         throw new Error('Failed to fetch portfolio data:', err);
-        throw err;
       } finally {
         this.isLoading = false;
       }

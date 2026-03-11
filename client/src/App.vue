@@ -13,6 +13,7 @@ import CourseCard from './components/certifications-and-courses/CourseCard.vue';
 import EducationCard from './components/education/EducationCard.vue';
 import Footer from './components/footer/Footer.vue';
 import ShowMoreLess from './components/ShowMoreLess.vue';
+import LoadingIcon from './components/LoadingIcon.vue';
 
 import { usePortfolioStore } from './stores/portfolioStore';
 
@@ -23,13 +24,15 @@ const workExperienceExpanded = ref(false);
 const coursesExpanded = ref(false);
 
 onMounted(async () => {
-  await store.fetchProjects();
   await store.fetchAllPortfolioData();
 });
 </script>
 
 <template>
-  <div class="relative">
+  <div v-if="store.isLoading" class="min-h-screen flex items-center justify-center">
+    <LoadingIcon />
+  </div>
+  <div v-else class="relative">
     <nav class="flex items-center justify-between p-4 lg:px-24 2xl:px-60 w-full border-b border-gray-300">
       <NameLogo class="mr-4" />
       <NavigationBar />
