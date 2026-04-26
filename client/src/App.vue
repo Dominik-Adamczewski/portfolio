@@ -14,6 +14,7 @@ import EducationCard from './components/education/EducationCard.vue';
 import Footer from './components/footer/Footer.vue';
 import ShowMoreLess from './components/ShowMoreLess.vue';
 import LoadingIcon from './components/LoadingIcon.vue';
+import TestAutomationProjectCard from './components/test-automation-projects/TestAutomationProjectCard.vue';
 
 import { usePortfolioStore } from './stores/portfolioStore';
 
@@ -73,6 +74,17 @@ onMounted(async () => {
               <ProjectCard :projectData="item" />
             </template>
           </Carousel>
+        </div>
+      </BaseSection>
+      <BaseSection title="Test Automation Projects" id="test-automation-projects" class="bg-portfolio-very-light-gray">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+          <TestAutomationProjectCard 
+            v-for="(project, index) in store.testAutomationProjects" 
+            :key="index" 
+            :project-data="project"
+            icon-color="green"
+            test-report-icon-type="chart"
+          />
         </div>
       </BaseSection>
       <BaseSection title="Technical Skills" id="skills" class="bg-white">

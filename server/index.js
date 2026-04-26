@@ -31,6 +31,9 @@ app.use((req, res, next) => {
 // Serve static files from "projects" directory
 app.use('/projects', express.static(path.join(__dirname, 'public', 'projects')));
 
+// Serve static HTML reports from Playwright Tests execution
+app.use('/test-automation-projects', express.static(path.join(__dirname, 'public', 'test-automation-projects')));
+
 // Load metadata about projects
 const metaDataPath = path.join(__dirname, 'data', 'projects-metadata.json');
 let projectsMetaData = {};
@@ -73,6 +76,30 @@ app.get('/api/projects', (req, res) => {
   } catch (error) {
     console.error('❌ Error:', error)
     res.status(500).json({ success: false, error: error.message })
+  }
+});
+
+// API: Get test automation test reports
+app.get('/api/test-automation-projects', (req, res) => {
+  const projectDir = path.join(__dirname, 'public', 'test-automation-projects');
+  const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000';
+
+  try {
+    const projects = fs.readdirSync(projectDir)
+      .filter(name => fs.statSync(path.join(projectDir, name)).isDirectory())
+      .map(name => {
+        const metadata = JSON.parse(
+          fs.readFileSync(path.join(projectDir, name, 'metadata.json'), 'utf-8')
+        );
+        return {
+          ...metadata,
+          reportUrl: `${baseUrl}/test-automation-projects/${name}/report.html`
+        };
+      });
+
+    res.json({ success: true, projects});
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 

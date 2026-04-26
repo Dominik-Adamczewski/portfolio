@@ -1,5 +1,21 @@
 [
   { 
+    "name": "Claude Code in Action", 
+    "issuer": "Anthropic", 
+    "link": "https://anthropic.skilljar.com/claude-code-in-action", 
+    "certificateLink": "https://verify.skilljar.com/c/b293xqzxiygb",
+    "iconType": "book",
+    "iconColor": "blue"
+  },
+  { 
+    "name": "Claude 101", 
+    "issuer": "Anthropic", 
+    "link": "https://anthropic.skilljar.com/claude-101", 
+    "certificateLink": "http://verify.skilljar.com/c/vsur5uzc7gd8",
+    "iconType": "book",
+    "iconColor": "blue"
+  },
+  { 
     "name": "OWASP ZAP Step-by-step Tutorial", 
     "issuer": "Arkenstone Learning - YouTube", 
     "link": "https://www.youtube.com/watch?v=bf2YuqgaeWo&list=PLH8n_ayg-60J9i3nsLybper-DR3zJw6Z5", 

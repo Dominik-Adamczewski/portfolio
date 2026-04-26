@@ -61,6 +61,5 @@ const iconTypeClasses = {
         </a>
       </div>
     </div>
-
   </div>
 </template>

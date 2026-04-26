@@ -38,6 +38,20 @@ export const api = {
     }
   },
 
+  async getTestAutomationProjects() {
+    try {
+      const response = await fetch(`${API_URL}/test-automation-projects`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch test automation projects');
+      }
+      const data = await response.json();
+      return data.projects;
+    } catch (error) {
+      console.error('API Error: ', error);
+      throw error;
+    }
+  },
+
   async getPortfolio() {
     try {
       const response = await fetch(`${API_URL}/portfolio`);

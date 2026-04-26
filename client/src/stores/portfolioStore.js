@@ -8,6 +8,7 @@ export const usePortfolioStore = defineStore('portfolioStore', {
     workExperienceItems: [],
     educationItems: [],
     projects: [],
+    testAutomationProjects: [],
     techSkillsByGroup: [],
     certificates: [],
     courses: [],
@@ -39,6 +40,7 @@ export const usePortfolioStore = defineStore('portfolioStore', {
         this.certificates = data.certificates || [];
         this.courses = data.courses || [];
         await this.fetchProjects();
+        await this.fetchTestAutomationProjects();
       } catch (err) {
         this.error = err.message;
         throw new Error('Failed to fetch portfolio data:', err);
@@ -55,6 +57,16 @@ export const usePortfolioStore = defineStore('portfolioStore', {
         this.error = err.message;
         throw new Error(err.message);
       }
-    }
+    },
+
+    async fetchTestAutomationProjects() {
+      try {
+        const response = await api.getTestAutomationProjects();
+        this.testAutomationProjects = response;
+      } catch (err) {
+        this.error = err.message;
+        throw new Error(err.message);
+      }
+    },
   }
 });
