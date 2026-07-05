@@ -55,9 +55,13 @@ const testReportIconClasses = {
         <i class="fa-solid fa-code"></i>
         Github
       </a>
-      <a :href="projectData.reportUrl" target="_blank" class="text-gray-400 hover:text-gray-500 mt-4 inline-block">
+      <a :href="projectData.reportUrl" target="_blank" class="text-gray-400 hover:text-gray-500 mt-4 inline-block mr-4">
         <i :class="testReportIconClasses[testReportIconType]"></i>
         Report
+      </a>
+      <a v-if="projectData.githubActionsLink" :href="projectData.githubActionsLink" target="_blank" class="text-gray-400 hover:text-gray-500 mt-4 inline-block">
+        <i :class="testReportIconClasses[testReportIconType]"></i>
+        CI/CD Report
       </a>
     </div>
   </div>

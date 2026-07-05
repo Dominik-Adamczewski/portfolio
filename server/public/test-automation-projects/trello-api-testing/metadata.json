@@ -1,5 +1,6 @@
 {
     "name": "Trello Api Testing",
     "description": "Automated tests for Trello API using Playwright. Tests covererd basic CRUD operations for boards, lists and cards.",
-    "githubLink": "https://github.com/Dominik-Adamczewski/playwright-tests/tree/main/trello-api-testing"
+    "githubLink": "https://github.com/Dominik-Adamczewski/playwright-tests/tree/main/trello-api-testing",
+    "iconColor": "red"
 }

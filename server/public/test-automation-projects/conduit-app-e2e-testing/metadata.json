@@ -1,0 +1,7 @@
+{
+  "name": "Conduit App E2E Testing with CI/CD pipeline (GitHub Actions)",
+  "description": "Automated tests for Conduit Blog App. Tests covererd different scenarios across the whole application, using POM, fixtures and other helper methods. GitHub Actions workflow simluates running tests in CI/CD pipeline.",
+  "githubLink": "https://github.com/Dominik-Adamczewski/playwright-tests/tree/main/conduit-app-e2e-testing",
+  "githubActionsLink": "https://github.com/Dominik-Adamczewski/conduit-realworld-example-app-for-e2e/actions/runs/28748652713",
+  "iconColor": "green"
+}

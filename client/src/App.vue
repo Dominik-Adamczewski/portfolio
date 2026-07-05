@@ -82,7 +82,7 @@ onMounted(async () => {
             v-for="(project, index) in store.testAutomationProjects" 
             :key="index" 
             :project-data="project"
-            icon-color="green"
+            :icon-color="project.iconColor"
             test-report-icon-type="chart"
           />
         </div>
